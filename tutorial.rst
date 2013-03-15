@@ -3,7 +3,6 @@
 ===========================
 
 
--------------------------------------------------------------------------------
 Pre-requisitos
 --------------
 
@@ -28,7 +27,6 @@ Pre-requisitos
 
 
 
--------------------------------------------------------------------------------
 Consiguiendo el código
 ----------------------
 
@@ -56,7 +54,6 @@ Consiguiendo el código
 
 
 
--------------------------------------------------------------------------------
 Dependencias
 ------------
 
@@ -82,7 +79,6 @@ esa magia.
 
 
 
--------------------------------------------------------------------------------
 Cabeceras (headers)
 -------------------
 
@@ -107,26 +103,25 @@ Cabeceras (headers)
 
   ::
 
-  ...
+    ...
 
-  /* All floating-point numbers can be put in one of these categories.  */
-  enum
-    {
-      FP_NAN =
-  # define FP_NAN 0
-        FP_NAN,
-      FP_INFINITE =
-  # define FP_INFINITE 1
-        FP_INFINITE,
-      FP_ZERO =
+    /* All floating-point numbers can be put in one of these categories.  */
+    enum
+      {
+        FP_NAN =
+    # define FP_NAN 0
+          FP_NAN,
+        FP_INFINITE =
+    # define FP_INFINITE 1
+          FP_INFINITE,
+        FP_ZERO =
 
-  ...
-
--------------------------------------------------------------------------------
-
-
+    ...
 
 -------------------------------------------------------------------------------
+
+
+
 Librerías
 ---------
 
@@ -158,20 +153,18 @@ Librerías
 
   ::
 
-  $ ldd "$(type -P nc)" # type -P nc  es un comando de bash para
-                          imprimir la ruta al binario.
-  	linux-vdso.so.1 (0x00007fff4bdff000)
-  	libbsd.so.0 => /usr/lib/libbsd.so.0 (0x00007fefc2041000)
-  	libresolv.so.2 => /usr/lib/libresolv.so.2 (0x00007fefc1e2a000)
-  	libc.so.6 => /usr/lib/libc.so.6 (0x00007fefc1a7d000)
-  	/lib/ld-linux-x86-64.so.2 (0x00007fefc224e000)
+    $ ldd "$(type -P nc)" # type -P nc  es un comando de bash para
+                            imprimir la ruta al binario.
+    	linux-vdso.so.1 (0x00007fff4bdff000)
+    	libbsd.so.0 => /usr/lib/libbsd.so.0 (0x00007fefc2041000)
+    	libresolv.so.2 => /usr/lib/libresolv.so.2 (0x00007fefc1e2a000)
+    	libc.so.6 => /usr/lib/libc.so.6 (0x00007fefc1a7d000)
+    	/lib/ld-linux-x86-64.so.2 (0x00007fefc224e000)
 
 -------------------------------------------------------------------------------
 
 
 
-
--------------------------------------------------------------------------------
 Entorno
 -------
 
@@ -188,13 +181,12 @@ instalaciones como super-usuario. Por ejemplo:
 
   ::
 
-  PATH=$HOME/local/bin:$PATH
+    PATH=$HOME/local/bin:$PATH
 
 -------------------------------------------------------------------------------
 
 
 
--------------------------------------------------------------------------------
 Autotools
 ---------
 
@@ -207,13 +199,12 @@ Autotools
   
   ::
 
-  ./configure && make && make install
+    ./configure && make && make install
 
 -------------------------------------------------------------------------------
 
 
 
--------------------------------------------------------------------------------
 configure
 ---------
 
@@ -229,7 +220,6 @@ configure
 
 
 
--------------------------------------------------------------------------------
 Makefile
 --------
 
